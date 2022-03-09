@@ -1,0 +1,61 @@
+<% layout('layout/boilerplate') -%>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h1 class="text-center">New Campground</h1>
+            <div class="card shadow">
+                <div class="card-body">
+                    <form action="/campgrounds" enctype="multipart/form-data" method="POST" class="needs-validation" novalidate> 
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title:</label>
+                            <input class="form-control" type="text" name="title" id="title" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Location:</label>
+                            <input class="form-control" type="text" name="location" id="location" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="mb-3">
+                                <!-- <label for="img" class="form-label">Img:</label>
+                                <input class="form-control" type="text" name="img" id="img" required> -->
+                                <label for="formFile" class="form-label">Img:</label>
+                                <input class="form-control" name="img" type="file" id="formFile" multiple>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Price:</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">$</span>
+                                <input class="form-control" type="number" name="price" id="price" min="0" required> 
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description:</label>
+                            <textarea class="form-control" type="text" name="description" id="description" required></textarea>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <button class="btn btn-primary">save</button>
+                            <a href="/campgrounds" class="btn btn-secondary mx-2">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
